@@ -1,10 +1,9 @@
 #define ADDRESS     "tcp://localhost:1883"
 #define CLIENTID    "DossTestIOT"
-#define TOPIC       "DOSSVAL"
+#define TOPIC       "device1"
 #define QOS         1
 #define TIMEOUT     10000L
-//define PAYLOAD		"121212"
-
+#define RANDOMLENGTH   4
 
 
 /*
