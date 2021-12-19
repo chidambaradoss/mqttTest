@@ -1,3 +1,16 @@
 [Sun Dec 19 20:39:14 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 3567, "timestamp": 1639926554 }
 [Sun Dec 19 20:39:41 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 9254, "timestamp": 1639926581 }
 [Sun Dec 19 20:39:54 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 7090, "timestamp": 1639926594 }
+[Sun Dec 19 20:43:07 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 3603, "timestamp": 1639926786 }
+[Sun Dec 19 20:50:51 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 4423, "timestamp": 1639927251 }
+[Sun Dec 19 20:51:22 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 9564, "timestamp": 1639927282 }
+[Sun Dec 19 20:51:31 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 8047, "timestamp": 1639927291 }
+[Sun Dec 19 21:02:08 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 7839, "timestamp": 1639927928 }
+[Sun Dec 19 21:02:23 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 1484, "timestamp": 1639927943 }
+[Sun Dec 19 21:02:34 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 5522, "timestamp": 1639927954 }
+[Sun Dec 19 21:02:42 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 5071, "timestamp": 1639927962 }
+[Sun Dec 19 21:37:26 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 7878, "timestamp": 1639930046 }
+[Sun Dec 19 22:44:48 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 8300, "timestamp": 1639934088 }
+[Sun Dec 19 22:46:39 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 3987, "timestamp": 1639934198 }
+[Sun Dec 19 22:46:47 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 3838, "timestamp": 1639934207 }
+[Sun Dec 19 23:17:42 2021] ADDRESS : tcp://localhost:1883 | CLIENTID : DossTestIOT | TOPIC : device1 | Data : { "value": 8044, "timestamp": 1639936061 }

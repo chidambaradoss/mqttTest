@@ -9,7 +9,7 @@ sudo make install
 sudo apt install libjson-c-dev
 
 
-gcc -o random MQTTZohoTest.c -lpaho-mqtt3c -ljson-c
+gcc -o MQTTOutput MQTTZohoTest.c -lpaho-mqtt3c -ljson-c
 
 */
 
@@ -48,52 +48,26 @@ char* createJoson(int value,int time)
      /*Creating a json object*/
       json_object * jobj = json_object_new_object();
 
-      /*Creating a json string*/
-     // json_object *jstringVal = json_object_new_string("Joys of Programming");
 
-      /*Creating a json integer*/
       json_object *jVal = json_object_new_int(value);
       json_object *jtime = json_object_new_int(time);
 
-      // /*Creating a json boolean*/
-      // json_object *jboolean = json_object_new_boolean(1);
 
-      // /*Creating a json double*/
-      // json_object *jdouble = json_object_new_double(2.14);
-
-      // /*Creating a json array*/
-      // json_object *jarray = json_object_new_array();
-
-      // /*Creating json strings*/
-      // json_object *jstring1 = json_object_new_string("c");
-      // json_object *jstring2 = json_object_new_string("c++");
-      // json_object *jstring3 = json_object_new_string("php");
-
-      /*Adding the above created json strings to the array*/
-      // json_object_array_add(jarray,jstring1);
-      // json_object_array_add(jarray,jstring2);
-      // json_object_array_add(jarray,jstring3);
-
-      /*Form the json object*/
-      /*Each of these is like a key value pair*/
       json_object_object_add(jobj,"value", jVal);
       json_object_object_add(jobj,"timestamp", jtime);
 
-
-      /*Now printing the json object*/
-      //printf ("The json object created: %s",json_object_to_json_string(jobj));
-
       char *JsonOut;
       JsonOut=(char*)malloc( strlen(json_object_to_json_string(jobj))* sizeof(char) );
-      //sprintf(JsonOut, "%s", json_object_to_json_string(jobj));
       strcpy(JsonOut, json_object_to_json_string(jobj));
       return JsonOut;
 }
 
+
+
 int main(int argc, char* argv[])
 {
 
-
+    //callConfig();
 
     MQTTClient client;
     MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
@@ -106,8 +80,6 @@ int main(int argc, char* argv[])
     strcpy(PAYLOAD,createJoson(getRandom(),time(NULL)));
 
 
-
-    //strcpy(PAYLOAD,currentTime);
     MQTTClient_create(&client, ADDRESS, CLIENTID,
         MQTTCLIENT_PERSISTENCE_NONE, NULL);
     conn_opts.keepAliveInterval = 20;
@@ -136,8 +108,11 @@ int main(int argc, char* argv[])
     printf("Message with delivery token %d delivered\n", token);
     MQTTClient_disconnect(client, 10000);
     MQTTClient_destroy(&client);
-   
-    createLog(PAYLOAD);
+    if(LOGSTATUS==1)
+    {
+        createLog(PAYLOAD);
+    }
+    
     return rc;
 }
 
