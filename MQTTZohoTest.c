@@ -22,8 +22,9 @@ gcc -o random MQTTZohoTest.c -lpaho-mqtt3c -ljson-c
 #include "time.h"
 #include "math.h"
 #include "config.c" // config file 
-
+#include "stdlib.h"
 #include "json-c/json.h"
+#include "logger.c"
 
 int getRandom()
 {
@@ -37,6 +38,9 @@ int getRandom()
     return num;
 
 }
+
+
+
 
 
 char* createJoson(int value,int time)
@@ -73,7 +77,7 @@ char* createJoson(int value,int time)
       /*Form the json object*/
       /*Each of these is like a key value pair*/
       json_object_object_add(jobj,"value", jVal);
-      json_object_object_add(jobj,"time", jtime);
+      json_object_object_add(jobj,"timestamp", jtime);
 
 
       /*Now printing the json object*/
@@ -114,6 +118,7 @@ int main(int argc, char* argv[])
     {
         // display the error code
         printf("Failed to connect, return code %d\n", rc);
+        createLog("Failed to connect");
         exit(-1);
     }
 
@@ -131,6 +136,8 @@ int main(int argc, char* argv[])
     printf("Message with delivery token %d delivered\n", token);
     MQTTClient_disconnect(client, 10000);
     MQTTClient_destroy(&client);
+   
+    createLog(PAYLOAD);
     return rc;
 }
 
