@@ -14,7 +14,7 @@ mail : schidambaradoss@gmail.com <br>
 <li>Mqtt client :  mqtt explorer </li>
 </ul>
 <br>
-Compile & Run
+<b>Compile & Run</b>
 <br>
  First install eclipse paho mqtt and json-c on your pc then run the following commands :
  <br>
@@ -22,7 +22,7 @@ Compile & Run
 
 
 <br><br>
-Useful links
+<b>Useful links</b>
 <br>
 <a href="https://www.eclipse.org/paho/index.php?page=clients/c/index.php"> Install eclipse paho </a><br>
 <a href="https://github.com/jehiah/json-c">Install json-c</a><br>
