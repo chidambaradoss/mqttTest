@@ -14,15 +14,17 @@ mail : schidambaradoss@gmail.com <br>
 <li>Mqtt client :  mqtt explorer </li>
 </ul>
 <br>
-Compile & run
+Compile & Run
 <br>
  First install eclipse paho mqtt and json-c on your pc then run the following commands :
  <br>
- 
+ gcc -o MQTTOutput MQTTZohoTest.c -lpaho-mqtt3c -ljson-c
 
 
 <br><br>
-useful links
+Useful links
 <br>
 <a href="https://www.eclipse.org/paho/index.php?page=clients/c/index.php"> Install eclipse paho </a><br>
-<a href="https://github.com/jehiah/json-c">Install json-c</a>
+<a href="https://github.com/jehiah/json-c">Install json-c</a><br>
+<a href="https://mosquitto.org/download/">Mosquitto server</a><br>
+<a href="http://mqtt-explorer.com/">Mqtt Explorer</a>
