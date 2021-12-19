@@ -4,7 +4,7 @@
 #define QOS         1
 #define TIMEOUT     10000L
 #define RANDOMLENGTH   4
-
+#define LOGSTATUS   1 // 1-ON, 0-FF
 
 /*
 
@@ -25,3 +25,4 @@ The server listens on the following ports:
     8090 : MQTT over WebSockets, unencrypted, authenticated
     8091 : MQTT over WebSockets, encrypted, authenticated
 */
+

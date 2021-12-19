@@ -1,0 +1,9 @@
+{
+	"ADDRESS" : "tcp://localhost:1883",
+	"CLIENTID" : "DossTestIOT",
+	"TOPIC" : "device1",
+	"QOS" : 1,
+	"TIMEOUT" : "10000L",
+	"RANDOMLENGTH" : 4,
+	"LOGSTATUS" : 0
+}
